@@ -1,17 +1,17 @@
-let fullName = 'Logan Taehwan Lee';
+const fullName = 'Logan Taehwan Lee';
 console.log('value of fullName:', fullName);
 
-let isCool = true;
+const isCool = true;
 console.log('value of isCool:', isCool);
 
-let totalPets = 0;
+const totalPets = 0;
 console.log('value of totalPets:', totalPets);
 
 console.log('typeof fullName:', typeof fullName);
 console.log('typeof isCool:', typeof isCool);
 console.log('typeof totalPets:', typeof totalPets);
 
-let unknown = null;
+const unknown = null;
 console.log('value of unknown:', unknown);
 console.log('typeof unknown:', typeof unknown);
 
