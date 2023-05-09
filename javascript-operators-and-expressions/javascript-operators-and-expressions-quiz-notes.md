@@ -5,7 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What data type is returned by an arithmetic operation?
-Number
+Numbers
 - What is string concatenation?
 It is combining multiple strings to form one string (template literal or +)
 - What purpose(s) does the `+` plus operator serve in JavaScript?
