@@ -112,10 +112,8 @@ function introduceWarnerBro(name) {
     case 'yakko':
     case 'wakko':
       return 'We\'re the warner brothers!';
-      break;
     case 'dot':
       return 'I\'m cute~';
-      break;
     default:
       return 'Goodnight everybody!';
   }
@@ -131,22 +129,16 @@ function recommendMovie(genre) {
   switch (genre) {
     case 'action':
       return 'John Wick';
-      break;
     case 'comedy':
       return 'The 40-Year-Old Virgin';
-      break;
     case 'horror':
       return 'Se7en';
-      break;
     case 'drama':
       return 'Leon: The Professional';
-      break;
     case 'musical':
       return 'The Sound of Music';
-      break;
     case 'sci-fi':
       return 'Interstellar';
-      break;
     default:
       return 'Genre not recognized. Choose between action, comedy, horror, drama, musical, or sci-fi';
   }
