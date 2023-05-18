@@ -18,6 +18,7 @@ if keyword, followed by a condition in parentheses with the code to be executed 
 ||, &&, !
 - How do you compare two different expressions in the same condition?
 Using parentheses to group expressions and comparing them with comparison operators
+FIX logical operator
 - What is the purpose of a `switch` statement?
 To perform different actions based on different conditions. Switch is used to select one of many blocks of code to be executed
 - Is a `default` clause required in order to use a `switch` statement?
