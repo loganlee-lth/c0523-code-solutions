@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.navbar {
+  padding: 1.5rem;
+  border-bottom: 2px solid rgb(231,233,236);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+}
+
+.navbar a {
+  font-family: Avenir, sans-serif;
+  text-decoration: none;
+  color: rgb(160,160,160);
+  font-size: 0.85rem;
+  margin-left: 3rem;
+}
+
+#contact-us {
+  color: rgb(255,255,255);
+  background-color: rgb(40,69,100);
+  border-radius: 0.25rem;
+  margin-left: 2.5rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.hero {
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 500px;
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+}
+
+.hero-text {
+  color: rgb(255,255,255);
+  position: absolute;
+  width: 56%;
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+
+h1 {
+  font-family: "Tiempos Headline", sans-serif;
+  font-size: 2.3rem;
+  margin-top: 2.2rem;
+}
+
+.hero-text > p {
+  font-family: Avenir, sans-serif;
+  margin-top: 1.2rem;
+  line-height: 1.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-text a {
+  font-family: Avenir, sans-serif;
+  text-decoration: none;
+  color: rgb(255,255,255);
+  background-color: rgb(40,69,100);
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  margin-left: 0;
+  padding: 0.8rem 2.5rem;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 75%));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.location-container {
+  background-color: rgb(250,250,250);
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(231,233,236);
+}
+
+.clinician-locations {
+  text-align: center;
+  color: rgb(110,110,110);
+}
+
+h2 {
+  font-family: "Tiempos Headline", sans-serif;
+  color: rgb(110,110,110);
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.clinician-locations > p {
+  font-family: Avenir, sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 25%;
+  line-height: 1.5rem;
+  padding-bottom: 4rem;
+}
+
+.location {
+  display: flex;
+  justify-content: space-around;
+  font-family: Avenir, sans-serif;
+  color: rgb(137,137,137);
+  font-size: 1.1rem;
+  letter-spacing: 0.025rem;
+  width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+}
+
+.location:nth-of-type(4) {
+  padding-bottom: 5.5rem;
+}
+
+.learn-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.learn-flex-half > p {
+  font-size: 0.9rem;
+  font-family: Avenir, sans-serif;
+  color: rgb(110,110,110);
+}
+
+#get-started {
+  text-decoration: none;
+  font-family: Avenir, sans-serif;
+  color: rgb(255,255,255);
+  background-color: rgb(40,69,100);
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  margin-left: 0;
+  padding: 0.8rem 2.5rem;
+}
+
+.about {
+  background-color: rgb(82,83,81);
+  padding: 2rem;
+  margin: auto;
+}
+
+.summary-row {
+  display: flex;
+  font-family: Avenir, sans-serif;
+  color: rgb(255,255,255);
+  width: 1300px;
+  padding: 5rem;
+  margin: auto;
+}
+
+.column-third {
+  flex-basis: 33%;
+}
+
+.column-third:nth-of-type(1) {
+  margin-left: 4rem;
+}
+
+.column-third:nth-of-type(2) {
+  margin-left: 18rem;
+}
+
+.column-third:nth-of-type(3) {
+  margin-left: 1rem;
+}
+
+.about img {
+  width: 130px;
+  height: auto;
+}
+
+.address {
+  margin-top: 2rem;
+  line-height: 1.75rem;
+  font-size: 0.8rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about a {
+  text-decoration: none;
+  color: rgb(255,255,255);
+  line-height: 2.2rem;
+}
+
+footer {
+  display: flex;
+  margin: 0 auto;
+  font-family: Avenir, sans-serif;
+  width: 1020px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer {
+  text-decoration: none;
+  color: rgb(110,110,110);
+  font-size: 1.1rem;
+  margin-right: 2.2rem;
+}
