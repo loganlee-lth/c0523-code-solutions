@@ -55,8 +55,9 @@ ul {
   background-position: center;
   position: relative;
   height: 500px;
-  margin-top: 4rem;
-  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  scale: 90%;
 }
 
 .hero-text {
