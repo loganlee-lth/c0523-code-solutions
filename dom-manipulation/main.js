@@ -22,5 +22,4 @@ function clickButton(event) {
   } else {
     $hotButton.className = 'hot-button nuclear';
   }
-  console.log($hotButton.className)
 }
