@@ -1,19 +1,19 @@
 console.log('hello, world');
 
-let h1 = document.querySelector('h1');
+const h1 = document.querySelector('h1');
 console.log('h1:', h1);
 console.dir(h1);
 
-let explanation = document.querySelector('#explanation');
+const explanation = document.querySelector('#explanation');
 console.log('$explanation', explanation);
 console.dir(explanation);
 
-let hint = document.querySelector('.hint');
+const hint = document.querySelector('.hint');
 console.log('$hint', hint);
 console.dir(hint);
 
-let parent = document.querySelectorAll('p');
+const parent = document.querySelectorAll('p');
 console.log('$paragraphs:', parent);
 
-let exampleLink = document.querySelectorAll('.example-link');
+const exampleLink = document.querySelectorAll('.example-link');
 console.log('$links:', exampleLink);
