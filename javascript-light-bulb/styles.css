@@ -8,11 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* height: 500px;
-  width: 500px; */
-
-  /* margin: 0 auto; */
   min-height: 100vh;
   background-color: rgb(254,249,241);
 }
