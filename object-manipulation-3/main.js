@@ -87,4 +87,5 @@ function calculateScore(players) {
   return playerScores;
 }
 
-calculateScore(deal(createPlayers(), shuffleDeck(createDeck())));
+const displayWinner = calculateScore(deal(createPlayers(), shuffleDeck(createDeck())));
+console.log(displayWinner);
