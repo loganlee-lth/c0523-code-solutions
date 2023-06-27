@@ -4,33 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Carousel</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="container">
+  <div class="image-container">
     <div class="row">
-      <div class="column-full align-center space-between">
+      <div class="column-full justify-center align-center">
         <i class="fa-solid fa-chevron-left fa-3x"></i>
-        <img src="images/001.png" alt="">
+        <img src="images/001.png" alt="Bulbasaur">
+        <img src="images/004.png" alt="Charmander" class="hide">
+        <img src="images/007.png" alt="Squirtle" class="hide">
+        <img src="images/025.png" alt="Pikachu" class="hide">
+        <img src="images/039.png" alt="Jigglypuff" class="hide">
         <i class="fa-solid fa-chevron-right fa-3x"></i>
-      </div>
-      <div class="row">
-        <div class="column-full circle justify-center align-center">
-          <i class="fa-solid fa-circle zero"></i>
-          <i class="fa-regular fa-circle one"></i>
-          <i class="fa-sharp fa-regular fa-circle two"></i>
-          <i class="fa-sharp fa-regular fa-circle three"></i>
-          <i class="fa-sharp fa-regular fa-circle four"></i>
-        </div>
       </div>
     </div>
   </div>
 
-
+  <div class="dot-container">
+    <div class="row">
+      <div class="column-full justify-center">
+        <i class="fa-solid fa-circle one"></i>
+        <i class="fa-regular fa-circle two"></i>
+        <i class="fa-regular fa-circle three"></i>
+        <i class="fa-regular fa-circle four"></i>
+        <i class="fa-regular fa-circle five"></i>
+      </div>
+    </div>
+  </div>
 
 
   <script src="main.js"></script>

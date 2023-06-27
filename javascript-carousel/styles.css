@@ -4,20 +4,25 @@
   padding: 0;
 }
 
-.container {
+.hide {
+  display: none !important;
+}
+
+.image-container {
   margin: 0 auto;
+  height: 400px;
+}
+
+.row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .column-full {
-  display: flex;
   flex-basis: 100%;
 }
 
 .justify-center {
+  display: flex;
   justify-content: center;
 }
 
@@ -30,10 +35,15 @@
 }
 
 img {
-  width: 50%;
+  scale: 50%;
 }
 
 .fa-chevron-left,
 .fa-chevron-right {
+  cursor: pointer;
+}
+
+.fa-circle {
+  margin: 5px;
   cursor: pointer;
 }
