@@ -6,12 +6,14 @@ export default function ToggleButton({ text, color }) {
 
   function handleClick() {
     console.log('before setter:', isClicked);
-    setIsClicked(isClicked ? false : true);
+    setIsClicked(!isClicked);
     console.log('after setter:', isClicked);
   }
 
   return (
-    <button onClick={handleClick} style={ isClicked ? { backgroundColor: 'white' } : { backgroundColor: color } }>
+    <button
+      onClick={handleClick}
+      style={{ backgroundColor: isClicked ? 'white' : color }}>
       {text}
     </button>
   );
