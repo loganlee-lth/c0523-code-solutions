@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #000;
+}
+
+button {
+  padding: 0.2rem;
+  border: 5px solid rgb(38, 35, 35);
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 1.3rem;
+}
+
+.numbered-button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
