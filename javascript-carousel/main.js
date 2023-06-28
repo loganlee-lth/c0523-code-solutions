@@ -1,36 +1,20 @@
-document.querySelectorAll('.carousel').forEach((carousel) => {
-  const items = carousel.querySelectorAll('.carousel__item');
-  const buttonsHtml = Array.from(items, () => {
-    return `<span class="carousel__button"></span>`;
-  });
+const $pokemonImages = document.querySelectorAll('.pokemon-img');
 
-  carousel.insertAdjacentHTML(
-    'beforeend',
-    `
-		<div class="carousel__nav">
-			${buttonsHtml.join('')}
-		</div>
-	`
-  );
+let imageIndex = 0;
 
-  const buttons = carousel.querySelectorAll('.carousel__button');
+console.log($pokemonImages[4]);
+console.log($pokemonImages[0].classList.add);
 
-  buttons.forEach((button, i) => {
-    button.addEventListener('click', () => {
-      // un-select all the items
-      items.forEach((item) =>
-        item.classList.remove('carousel__item--selected')
-      );
-      buttons.forEach((button) =>
-        button.classList.remove('carousel__button--selected')
-      );
+function showNext() {
+  imageIndex++;
+  if (imageIndex >= $pokemonImages.length) {
+    $pokemonImages[$pokemonImages.length - 1].classList.add('hide');
+    imageIndex = 0;
+    $pokemonImages[imageIndex].classList.remove('hide');
+  } else {
+    $pokemonImages[imageIndex].classList.remove('hide');
+    $pokemonImages[imageIndex - 1].classList.add('hide');
+  }
+}
 
-      items[i].classList.add('carousel__item--selected');
-      button.classList.add('carousel__button--selected');
-    });
-  });
-
-  // Select the first item on page load
-  items[0].classList.add('carousel__item--selected');
-  buttons[0].classList.add('carousel__button--selected');
-});
+const nIntervId = setInterval(showNext, 1000);
