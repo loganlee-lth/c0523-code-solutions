@@ -1,0 +1,14 @@
+.form-control {
+  display: inline-block;
+  width: 25%;
+}
+
+.fa-x {
+  color: red;
+  margin-left: 1rem;
+}
+
+.fa-check {
+  color: green;
+  margin-left: 1rem;
+}
