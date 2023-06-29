@@ -1,20 +1,59 @@
 const $pokemonImages = document.querySelectorAll('.pokemon-img');
+const $circles = document.querySelectorAll('.fa-circle');
+const $leftArrow = document.querySelector('.fa-chevron-left');
+const $rightArrow = document.querySelector('.fa-chevron-left');
+const $imageRow = document.querySelector('#image-container')
+const $circleRow = document.querySelector('#dot-container');
 
 let imageIndex = 0;
 
-console.log($pokemonImages[4]);
-console.log($pokemonImages[0].classList.add);
-
-function showNext() {
-  imageIndex++;
-  if (imageIndex >= $pokemonImages.length) {
-    $pokemonImages[$pokemonImages.length - 1].classList.add('hide');
-    imageIndex = 0;
-    $pokemonImages[imageIndex].classList.remove('hide');
-  } else {
-    $pokemonImages[imageIndex].classList.remove('hide');
-    $pokemonImages[imageIndex - 1].classList.add('hide');
+function showImage(currentIndex) {
+  for (let i = 0; i < $pokemonImages.length; i++) {
+    if (i === currentIndex) {
+      $pokemonImages[imageIndex].classList.remove('hide');
+      $circles[i].classList.replace('fa-regular', 'fa-solid');
+    } else {
+      $pokemonImages[i].classList.add('hide');
+      $circles[i].classList.replace('fa-solid', 'fa-regular');
+    }
   }
 }
 
-const nIntervId = setInterval(showNext, 1000);
+function showPrev() {
+  imageIndex--;
+  if (imageIndex < 0) {
+    imageIndex = $pokemonImages.length - 1;
+  }
+  showImage(imageIndex);
+}
+
+function showNext() {
+  imageIndex++;
+  if (imageIndex === $pokemonImages.length) {
+    imageIndex = 0;
+  }
+  showImage(imageIndex);
+}
+
+$imageRow.addEventListener('click', event => {
+  if (event.target.id === 'left') {
+    showPrev();
+  } else if (event.target.id === 'right') {
+    showNext();
+  }
+  clearInterval(carousel);
+  carousel = setInterval(showNext, 3000);
+});
+
+$circleRow.addEventListener('click', event => {
+  for (let i = 0 ; i < $circles.length; i++) {
+    if ($circles[i] === event.target) {
+      imageIndex = i;
+      showImage(imageIndex);
+      clearInterval(carousel);
+      carousel = setInterval(showNext, 3000);
+    }
+  }
+});
+
+let carousel = setInterval(showNext, 3000);
