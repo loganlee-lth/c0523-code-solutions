@@ -1,6 +1,6 @@
-function NextButton({ onCustomClick }) {
+function NextButton({ onNext }) {
   return (
-    <button onClick={onCustomClick} type="button">
+    <button onClick={onNext} type="button">
       Next
     </button>
   );

@@ -1,6 +1,6 @@
-function PrevButton({ onCustomClick }) {
+function PrevButton({ onPrev }) {
   return (
-    <button onClick={onCustomClick} type="button">
+    <button onClick={onPrev} type="button">
       Prev
     </button>
   );
