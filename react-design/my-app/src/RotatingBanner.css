@@ -1,17 +1,13 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+button {
+  margin: 0.1rem;
+  font-size: 1rem;
+  border: 3px solid darkgray;
 }
 
 h1 {
-  color: #000;
+  margin-bottom: 0.1rem;
 }
 
-button {
-  padding: 0.2rem;
-  border: 5px solid rgb(38, 35, 35);
-  width: 5rem;
-  height: 2.5rem;
-  font-size: 1.3rem;
+.current {
+  background-color: lightblue;
 }
