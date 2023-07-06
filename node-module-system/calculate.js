@@ -20,5 +20,5 @@ switch (process.argv[3]) {
     console.log('result:', divide(num1, num2));
     break;
   default:
-    console.log('invalid operation');
+    console.log('invalid operation:', process.argv[3]);
 }
