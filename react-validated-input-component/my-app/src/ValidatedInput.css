@@ -12,3 +12,7 @@
   color: green;
   margin-left: 1rem;
 }
+
+label {
+  display: block;
+}

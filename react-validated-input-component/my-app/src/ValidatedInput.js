@@ -19,18 +19,17 @@ export default function ValidatedInput() {
 
   return (
     <form className="form-group">
-      <label htmlFor="password5">Password</label>
       <div>
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          id="password5"
-          name="password"
-          type="password"
-          className={`form-control`}
-        />
-        <i className={`fa-solid ${icon}`}></i>
-        <p>{message}</p>
+        <label>Password</label>
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            type="password"
+            className={`form-control`}
+          />
+          <i className={`fa-solid ${icon}`}></i>
+          <p>{message}</p>
       </div>
     </form>
   );
