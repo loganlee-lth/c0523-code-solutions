@@ -8,7 +8,7 @@ async function readWriteFunc() {
     const content = await readFile(oldFile);
     await writeFile(newFile, content);
   } catch (err) {
-    console.log('Error:', err.message);
+    console.log('Error:', err);
   }
 }
 
