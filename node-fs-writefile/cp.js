@@ -5,7 +5,7 @@ const newFile = process.argv[3];
 
 async function readWriteFunc() {
   try {
-    const content = await readFile(oldFile, 'utf8');
+    const content = await readFile(oldFile);
     await writeFile(newFile, content);
   } catch (err) {
     console.log('Error:', err.message);
