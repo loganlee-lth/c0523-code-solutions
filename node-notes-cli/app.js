@@ -31,10 +31,18 @@ switch (userInput[0]) {
     console.log('Input not recognized. Please provide valid input.');
 }
 
+async function readData() {
+  return JSON.parse(await readFile('data.json', 'utf8'));
+}
+
+async function writeData(content) {
+  await writeFile('data.json', JSON.stringify(content, null, 2), 'utf8');
+}
+
 // Display all notes in the data.json file
 async function readNoteFunc() {
   try {
-    const content = JSON.parse(await readFile('data.json', 'utf8'));
+    const content = await readData();
     for (const [key, value] of Object.entries(content.notes)) {
       console.log(`${key}: ${value}`);
     }
@@ -46,10 +54,10 @@ async function readNoteFunc() {
 // Append new note with a unique id and increment next id
 async function createNoteFunc() {
   try {
-    const content = JSON.parse(await readFile('data.json', 'utf8'));
+    const content = await readData();
     content.notes[content.nextId] = userInput[1];
     content.nextId++;
-    await writeFile('./data.json', JSON.stringify(content, null, 2));
+    await writeData(content);
   } catch (err) {
     console.log('Error:', err);
   }
@@ -58,12 +66,12 @@ async function createNoteFunc() {
 // Delete a note by its id
 async function deleteNoteFunc() {
   try {
-    const content = JSON.parse(await readFile('data.json', 'utf8'));
+    const content = await readData();
     if (!content.notes[userInput[1]]) {
       console.log('ID not found. Please enter a valid ID.');
     } else {
       delete content.notes[userInput[1]];
-      await writeFile('./data.json', JSON.stringify(content, null, 2));
+      await writeData(content);
     }
   } catch (err) {
     console.log('Error:', err);
@@ -73,12 +81,12 @@ async function deleteNoteFunc() {
 // Replace a note given its unique id with the new note
 async function updateNoteFunc() {
   try {
-    const content = JSON.parse(await readFile('data.json', 'utf8'));
+    const content = await readData();
     if (!(userInput[1] in content.notes)) {
       console.log(`ID ${userInput[1]} not found.`);
     } else {
       content.notes[userInput[1]] = userInput[2];
-      await writeFile('./data.json', JSON.stringify(content, null, 2));
+      await writeData(content);
     }
   } catch (err) {
     console.log('Error:', err);
