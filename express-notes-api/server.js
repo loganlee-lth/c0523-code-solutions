@@ -45,7 +45,8 @@ app.get('/api/notes/:id', async (req, res) => {
     if (isNaN(id) || id <= 0) {
       res.status(400).json({ error: 'id must be a positive integer' });
       return;
-    } else if (!data.notes[id]) {
+    }
+    if (!data.notes[id]) {
       res.status(404).json({ error: `cannot find note with id ${id}` });
       return;
     }
@@ -88,7 +89,8 @@ app.delete('/api/notes/:id', async (req, res) => {
     if (isNaN(id) || id <= 0) {
       res.status(400).json({ error: 'id must be a positive integer' });
       return;
-    } else if (!data.notes[id]) {
+    }
+    if (!data.notes[id]) {
       res.status(404).json({ error: `cannot find note with id ${id}` });
       return;
     }
@@ -111,10 +113,12 @@ app.put('/api/notes/:id', async (req, res) => {
     if (isNaN(id) || id <= 0) {
       res.status(400).json({ error: 'id must be a positive integer' });
       return;
-    } else if (!req.body.content) {
+    }
+    if (!req.body.content) {
       res.status(400).json({ error: 'content is a required field.' });
       return;
-    } else if (!data.notes[id]) {
+    }
+    if (!data.notes[id]) {
       res.status(404).json({ error: `cannot find note with id ${id}` });
       return;
     }
