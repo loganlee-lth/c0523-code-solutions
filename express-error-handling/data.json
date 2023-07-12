@@ -1,0 +1,21 @@
+{
+  "nextId": 21,
+  "notes": {
+    "15": {
+      "id": 15,
+      "content": "Learning React"
+    },
+    "17": {
+      "id": 17,
+      "content": "Learning ExpressJS"
+    },
+    "18": {
+      "id": 18,
+      "content": "Learning TypeScript"
+    },
+    "19": {
+      "id": 19,
+      "content": "Learn more"
+    }
+  }
+}
