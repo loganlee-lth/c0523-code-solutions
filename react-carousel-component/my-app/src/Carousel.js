@@ -32,9 +32,9 @@ export default function Carousel({ images }) {
       <div className="image-container">
         <div className="row">
           <div className="column-full justify-center align-center">
-            <PrevButton onPrev={handleClickPrev} className="left" />
-            <Content image={images[currentIndex]} className="pokemon-img" />
-            <NextButton onNext={handleClickNext} className="right" />
+            <PrevButton onPrev={handleClickPrev} />
+            <Content image={images[currentIndex]} />
+            <NextButton onNext={handleClickNext} />
           </div>
         </div>
       </div>
