@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 700px;
+  height: 550px;
+  border: 2px black solid;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.image-container {
+  height: 400px;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+img {
+  scale: 50%;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.circle {
+  margin: 5px;
+}
