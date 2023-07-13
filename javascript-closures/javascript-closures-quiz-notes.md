@@ -9,13 +9,13 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What allows JavaScript functions to "remember" variables from their surroundings?
   When a function is defined inside another function, it has access to the outer function's variables. The inner function 'remembers' these variables even after the outer function has finished executing
 - What values does a closure contain?
-  Its own scope, variables from the outer function(s), and variables from the global scope
+  Its own scope, variables from the outer function(s)
 - When is a closure created?
   Every time a function is created, at function creation time
 - How can you tell if a function will be created with a closure?
   Any function that is nested within another function and accesses variables from its outer function will have a closure
 - In React, what is one important case where you need to know if a closure was created?
-  If you create closures inside useEffect, it is important to know because it may cause bugs and it will help you know when the Effect should actually be ran.
+  useEffect and useCallback
 
 ## Notes
 
