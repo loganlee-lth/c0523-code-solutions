@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+#image-container {
+  margin: 0 auto;
+  height: 400px;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+img {
+  scale: 50%;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  cursor: pointer;
+}
+
+.fa-circle {
+  margin: 5px;
+  cursor: pointer;
+}
