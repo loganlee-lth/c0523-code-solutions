@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import PrevButton from './PrevButton';
 import NextButton from './NextButton';
 import Content from './Content';
@@ -8,24 +8,24 @@ import './Carousel.css';
 export default function Carousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(handleClickNext, 3000);
-    return () => clearInterval(interval);
-  });
+  const handleClickNext = useCallback(() => {
+    const index = (currentIndex + 1) % images.length;
+    setCurrentIndex(index);
+  }, [currentIndex, images]);
 
   function handleClickPrev() {
     const index = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(index);
   }
 
-  function handleClickNext() {
-    const index = (currentIndex + 1) % images.length;
-    setCurrentIndex(index);
-  }
-
   function handleSelect(index) {
     setCurrentIndex(index);
   }
+
+  useEffect(() => {
+    const interval = setInterval(handleClickNext, 3000);
+    return () => clearInterval(interval);
+  }, [handleClickNext]);
 
   return (
     <div className="container">
