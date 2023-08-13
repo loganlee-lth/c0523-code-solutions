@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { FaAlignJustify } from 'react-icons/fa';
 import './App.css';
-import AppDrawer from './AppDrawer';
+import AppDrawer, { Item } from './AppDrawer';
 import Header from './Header';
 
-const menuItems = [
+const menuItems: Item[] = [
   { id: 1, name: 'About' },
   { id: 2, name: 'Get Started' },
   { id: 3, name: 'Sign In' },

@@ -1,7 +1,8 @@
 import { ReactElement } from 'react';
+import { Item } from './AppDrawer';
 
 type DrawerItemProps = {
-  item: { id: number; name: string };
+  item: Item;
   onItemClick: (item: string) => void;
 };
 

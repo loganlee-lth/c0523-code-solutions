@@ -1,9 +1,14 @@
 import { ReactElement } from 'react';
 import DrawerItem from './DrawerItem';
 
+export type Item = {
+  id: number;
+  name: string;
+};
+
 type AppDrawerProps = {
   isOpen: boolean;
-  items: { id: number; name: string }[];
+  items: Item[];
   onItemClick: (item: string) => void;
   onDrawerClick: () => void;
 };
