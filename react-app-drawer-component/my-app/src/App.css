@@ -1,0 +1,59 @@
+button {
+  margin: 20px;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  padding: 16px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.drawerClosed {
+  transform: translateX(-100%);
+}
+
+.drawer-item {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.backdropClosed {
+  display: none;
+}
+
+.icon-size {
+  scale: 200%;
+  margin: 2rem;
+}
